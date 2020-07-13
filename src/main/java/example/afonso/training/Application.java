@@ -1,6 +1,7 @@
 package example.afonso.training;
 
 import java.util.ArrayList;
+import org.apache.commons.lang3.StringUtils;
 
 public class Application {
     
@@ -19,5 +20,6 @@ public class Application {
 		for(String str: app.messages){
 			System.out.println (str);
 		}
+		StringUtils.split("Hello Maven", " ");
     }
 }
