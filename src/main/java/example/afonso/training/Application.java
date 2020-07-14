@@ -7,6 +7,11 @@ public class Application {
     
 	private ArrayList<String> messages;
 	
+	public int countWords(String words){
+		String [] separateWords = StringUtils.split(words, ' ');
+		return (separateWords == null) ? 0 : separateWords.length;
+	}	
+	
     public Application() {
         System.out.println ("Inside Application");
 		messages = new ArrayList<>();
@@ -20,6 +25,8 @@ public class Application {
 		for(String str: app.messages){
 			System.out.println (str);
 		}
-		StringUtils.split("Hello Maven", " ");
+		int count = app.countWords("I have four words");
+		System.out.println("Word count: " + count);
+		
     }
 }
